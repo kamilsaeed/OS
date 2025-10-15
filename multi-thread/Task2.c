@@ -8,6 +8,7 @@ void* calc_square(void* arg)
     double* num_ptr = (double*)arg;        
     double square = (*num_ptr) * (*num_ptr);
     printf("\nSquare thread: %.2f\n", square);
+
     return NULL;
 }
 
@@ -17,6 +18,7 @@ void* calc_sqrt(void* arg)
     double* num_ptr = (double*)arg;       
     double root = sqrt(*num_ptr);
     printf("Square root thread: %.2f\n\n", root);
+    
     return NULL;
 }
 
