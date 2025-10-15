@@ -10,7 +10,7 @@ void* increment_local(void* arg)
         local_counter++;
         printf("Thread incrementing global: %d\n", local_counter);
     }
-    return NULL;
+return NULL;
 }
 
 int main() 
