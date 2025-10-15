@@ -9,7 +9,6 @@ void* sum(void* arg)
 {
     sum_result = num1 + num2;
     printf("Sum of two number is %d\n", sum_result);
-
     return NULL;
 }
 
@@ -17,7 +16,6 @@ void* sub(void* arg)
 {
     sub_result = num1 - num2;
     printf("Subtraction of two number is %d\n", sub_result);
-
     return NULL;
 }
 
@@ -25,7 +23,6 @@ void* mul(void* arg)
 {
     mul_result = num1 * num2;
     printf("Product of two number is %d\n", mul_result);
-
     return NULL;
 }
 
@@ -33,7 +30,6 @@ void* div(void* arg)
 {
     div_result = num1 / num2;
     printf("Division of two number is %d\n", div_result);
-
     return NULL;
 }
 
