@@ -3,14 +3,14 @@
 
 int global_counter = 0;
 
-void* increment_global(void* arg) 
+void* increment_global(void* arg)
 {
     for (int i = 0; i < 5; i++) 
     {
         global_counter++;
         printf("Thread incrementing global: %d\n", global_counter);
     }
-return NULL;
+    return NULL;
 }
 
 int main() 
