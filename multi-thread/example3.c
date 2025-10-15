@@ -8,7 +8,6 @@ void* modify_local(void* arg)
     *local_var_ptr += 10;
 
     printf("Thread: local_var = %d\n", *local_var_ptr); 
-
     return NULL;
 }
 
@@ -23,6 +22,5 @@ int main()
     pthread_join(thread, NULL);   
 
     printf("After thread: local_var = %d\n", local_var);
-
     return 0;
 }
