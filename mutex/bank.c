@@ -10,14 +10,9 @@ void* transfertoB(void* arg)
 {
     pthread_mutex_lock(&lock1);
     printf("Thread 1 locked Account 1\n");
-    sleep(1);
-    pthread_mutex_lock(&lock2);
-    printf("Thread 1 locked Account 2\n");
 
     acc1 -= 100;
-    acc2 += 100;
 
-    pthread_mutex_unlock(&lock2);
     pthread_mutex_unlock(&lock1);
     return NULL;
 }
@@ -26,14 +21,9 @@ void* transfertoA(void* arg)
 {
     pthread_mutex_lock(&lock2);
     printf("Thread 2 locked Account 2\n");
-    sleep(1);
-    pthread_mutex_lock(&lock1);
-    printf("Thread 2 locked Account 1\n");
 
     acc2 -= 50;
-    acc1 += 50;
 
-    pthread_mutex_unlock(&lock1);
     pthread_mutex_unlock(&lock2);
     return NULL;
 }
@@ -50,7 +40,7 @@ int main()
     pthread_join(t1, NULL);
     pthread_join(t2, NULL);
 
-    printf("Final Balances: acc1=%d acc2=%d\n", acc1, acc2);
+    printf("Final Balances: Account 1 = %d Account 1 = %d\n", acc1, acc2);
 
     pthread_mutex_destroy(&lock1);
     pthread_mutex_destroy(&lock2);
